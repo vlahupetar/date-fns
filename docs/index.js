@@ -30,6 +30,14 @@ export default {
     },
     {
       type: 'markdown',
+      urlId: 'FAQ',
+      category: 'General',
+      title: 'FAQ',
+      description: 'Comparison with Moment.js, the goal of the project, etc.',
+      path: path.join(__dirname, 'getting_started.md')
+    },
+    {
+      type: 'markdown',
       urlId: 'Change-Log',
       category: 'General',
       title: 'Change Log',
