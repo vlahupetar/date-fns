@@ -5,5 +5,7 @@ import buildFormatLocale from './build_format_locale/index.js'
  * @category Locales
  * @summary English locale.
  */
-export const distanceInWords = buildDistanceInWordsLocale()
-export const format = buildFormatLocale()
+export default {
+  distanceInWords: buildDistanceInWordsLocale(),
+  format: buildFormatLocale()
+}
