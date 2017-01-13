@@ -76,7 +76,8 @@
     "flow-check": "flow check",
     "systemjs-check": "babel-node scripts/systemjs_check.js",
     "benchmark": "env TEST_BENCHMARK=true karma start config/karma.js --single-run",
-    "generate-typings": "babel-node ./scripts/generate_typings"
+    "generate-typings": "babel-node ./scripts/generate_typings",
+    "build-fp": "babel-node ./scripts/build_fp"
   },
   "standard": {
     "parser": "babel-eslint",

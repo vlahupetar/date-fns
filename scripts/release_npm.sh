@@ -11,6 +11,7 @@ for pattern in CHANGELOG.md \
   index.js \
   package.json \
   typings.d.ts \
+  fp \
   src/*
 do
   cp -r "$pattern" "$dir"
@@ -23,6 +24,8 @@ do
   module=${module%*/}
   cp scripts/sub_module_package.json "$module/package.json"
 done
+
+npm run build-fp
 
 cp dist/date_fns_docs.json $dir/docs.json
 find "$dir" -type f -name "test.js" -delete
