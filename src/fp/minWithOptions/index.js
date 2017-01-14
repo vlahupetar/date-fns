@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../min/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../min/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
 var minWithOptions = convertToFpWithOptions(fn, 1)
 
-module.exports = minWithOptions
+export default minWithOptions

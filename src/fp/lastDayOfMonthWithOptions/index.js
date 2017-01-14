@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../last_day_of_month/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../last_day_of_month/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var lastDayOfMonthWithOptions = convertToFpWithOptions(fn, 1)
+var lastDayOfMonthWithOptions = convertToFpWithOptions(fn, 2)
 
-module.exports = lastDayOfMonthWithOptions
+export default lastDayOfMonthWithOptions

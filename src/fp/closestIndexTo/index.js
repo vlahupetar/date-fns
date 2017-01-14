@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../closest_index_to/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../closest_index_to/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var closestIndexTo = convertToFp(fn, 2)
+var closestIndexTo = convertToFp(fn, 3)
 
-module.exports = closestIndexTo
+export default closestIndexTo

@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../add_minutes/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../add_minutes/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var addMinutes = convertToFp(fn, 2)
+var addMinutes = convertToFp(fn, 3)
 
-module.exports = addMinutes
+export default addMinutes

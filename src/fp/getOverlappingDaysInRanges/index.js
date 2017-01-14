@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../get_overlapping_days_in_ranges/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../get_overlapping_days_in_ranges/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var getOverlappingDaysInRanges = convertToFp(fn, 4)
+var getOverlappingDaysInRanges = convertToFp(fn, 3)
 
-module.exports = getOverlappingDaysInRanges
+export default getOverlappingDaysInRanges

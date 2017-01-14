@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../is_leap_year/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../is_leap_year/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var isLeapYearWithOptions = convertToFpWithOptions(fn, 1)
+var isLeapYearWithOptions = convertToFpWithOptions(fn, 2)
 
-module.exports = isLeapYearWithOptions
+export default isLeapYearWithOptions

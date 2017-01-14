@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../get_iso_week/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../get_iso_week/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var getISOWeekWithOptions = convertToFpWithOptions(fn, 1)
+var getISOWeekWithOptions = convertToFpWithOptions(fn, 2)
 
-module.exports = getISOWeekWithOptions
+export default getISOWeekWithOptions

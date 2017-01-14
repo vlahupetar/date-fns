@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../end_of_month/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../end_of_month/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var endOfMonth = convertToFp(fn, 1)
+var endOfMonth = convertToFp(fn, 2)
 
-module.exports = endOfMonth
+export default endOfMonth

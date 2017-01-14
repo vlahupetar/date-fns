@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../difference_in_seconds/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../difference_in_seconds/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var differenceInSeconds = convertToFp(fn, 2)
+var differenceInSeconds = convertToFp(fn, 3)
 
-module.exports = differenceInSeconds
+export default differenceInSeconds

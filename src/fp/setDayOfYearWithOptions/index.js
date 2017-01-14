@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../set_day_of_year/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../set_day_of_year/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var setDayOfYearWithOptions = convertToFpWithOptions(fn, 2)
+var setDayOfYearWithOptions = convertToFpWithOptions(fn, 3)
 
-module.exports = setDayOfYearWithOptions
+export default setDayOfYearWithOptions

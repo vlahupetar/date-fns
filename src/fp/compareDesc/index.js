@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../compare_desc/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../compare_desc/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var compareDesc = convertToFp(fn, 2)
+var compareDesc = convertToFp(fn, 3)
 
-module.exports = compareDesc
+export default compareDesc

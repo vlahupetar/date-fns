@@ -1,4 +1,4 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_typings.js`. Please, don't change it.
 
 type Range = {
   start: Date | string | number,

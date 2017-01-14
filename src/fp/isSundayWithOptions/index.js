@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../is_sunday/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../is_sunday/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var isSundayWithOptions = convertToFpWithOptions(fn, 1)
+var isSundayWithOptions = convertToFpWithOptions(fn, 2)
 
-module.exports = isSundayWithOptions
+export default isSundayWithOptions

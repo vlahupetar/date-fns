@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../end_of_hour/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../end_of_hour/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var endOfHour = convertToFp(fn, 1)
+var endOfHour = convertToFp(fn, 2)
 
-module.exports = endOfHour
+export default endOfHour

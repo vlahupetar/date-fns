@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../set_date/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../set_date/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var setDate = convertToFp(fn, 2)
+var setDate = convertToFp(fn, 3)
 
-module.exports = setDate
+export default setDate

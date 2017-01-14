@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../add_milliseconds/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../add_milliseconds/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var addMillisecondsWithOptions = convertToFpWithOptions(fn, 2)
+var addMillisecondsWithOptions = convertToFpWithOptions(fn, 3)
 
-module.exports = addMillisecondsWithOptions
+export default addMillisecondsWithOptions

@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../start_of_minute/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../start_of_minute/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var startOfMinuteWithOptions = convertToFpWithOptions(fn, 1)
+var startOfMinuteWithOptions = convertToFpWithOptions(fn, 2)
 
-module.exports = startOfMinuteWithOptions
+export default startOfMinuteWithOptions

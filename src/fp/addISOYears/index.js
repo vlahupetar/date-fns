@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../add_iso_years/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../add_iso_years/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var addISOYears = convertToFp(fn, 2)
+var addISOYears = convertToFp(fn, 3)
 
-module.exports = addISOYears
+export default addISOYears

@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../is_same_month/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../is_same_month/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var isSameMonthWithOptions = convertToFpWithOptions(fn, 2)
+var isSameMonthWithOptions = convertToFpWithOptions(fn, 3)
 
-module.exports = isSameMonthWithOptions
+export default isSameMonthWithOptions

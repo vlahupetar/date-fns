@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../is_valid/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../is_valid/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var isValidWithOptions = convertToFpWithOptions(fn, 1)
+var isValidWithOptions = convertToFpWithOptions(fn, 2)
 
-module.exports = isValidWithOptions
+export default isValidWithOptions

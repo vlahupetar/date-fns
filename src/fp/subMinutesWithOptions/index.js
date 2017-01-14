@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../sub_minutes/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../sub_minutes/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var subMinutesWithOptions = convertToFpWithOptions(fn, 2)
+var subMinutesWithOptions = convertToFpWithOptions(fn, 3)
 
-module.exports = subMinutesWithOptions
+export default subMinutesWithOptions

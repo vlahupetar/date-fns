@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../sub_quarters/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../sub_quarters/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var subQuartersWithOptions = convertToFpWithOptions(fn, 2)
+var subQuartersWithOptions = convertToFpWithOptions(fn, 3)
 
-module.exports = subQuartersWithOptions
+export default subQuartersWithOptions

@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../set_seconds/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../set_seconds/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var setSecondsWithOptions = convertToFpWithOptions(fn, 2)
+var setSecondsWithOptions = convertToFpWithOptions(fn, 3)
 
-module.exports = setSecondsWithOptions
+export default setSecondsWithOptions

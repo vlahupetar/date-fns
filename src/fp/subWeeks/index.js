@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../sub_weeks/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../sub_weeks/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var subWeeks = convertToFp(fn, 2)
+var subWeeks = convertToFp(fn, 3)
 
-module.exports = subWeeks
+export default subWeeks

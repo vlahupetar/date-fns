@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../each_day/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../each_day/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var eachDay = convertToFp(fn, 2)
+var eachDay = convertToFp(fn, 3)
 
-module.exports = eachDay
+export default eachDay

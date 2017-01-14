@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../is_before/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../is_before/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var isBefore = convertToFp(fn, 2)
+var isBefore = convertToFp(fn, 3)
 
-module.exports = isBefore
+export default isBefore

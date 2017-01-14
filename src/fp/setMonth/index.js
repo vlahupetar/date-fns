@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../set_month/index.js')
-var convertToFp = require('../_lib/convertToFp/index.js')
+import fn from '../../set_month/index.js'
+import convertToFp from '../_lib/convertToFp/index.js'
 
-var setMonth = convertToFp(fn, 2)
+var setMonth = convertToFp(fn, 3)
 
-module.exports = setMonth
+export default setMonth

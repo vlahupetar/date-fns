@@ -1,8 +1,8 @@
-// This file is generated automatically. Please don't change it.
+// This file is generated automatically by `scripts/build_fp.js`. Please, don't change it.
 
-var fn = require('../../end_of_hour/index.js')
-var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')
+import fn from '../../end_of_hour/index.js'
+import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'
 
-var endOfHourWithOptions = convertToFpWithOptions(fn, 1)
+var endOfHourWithOptions = convertToFpWithOptions(fn, 2)
 
-module.exports = endOfHourWithOptions
+export default endOfHourWithOptions
