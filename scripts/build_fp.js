@@ -11,7 +11,9 @@ function buildFpFn (doc) {
   const {name, params} = doc.content
   const arity = params.filter((param) => !param.name.includes('.')).length
 
-  const fpFnLines = [`var fn = require('../../${camelCaseToSnakeCase(name)}/index.js')`]
+  const fpFnLines = ['// This file is generated automatically. Please don\'t change it.']
+    .concat('')
+    .concat(`var fn = require('../../${camelCaseToSnakeCase(name)}/index.js')`)
     .concat(`var convertToFp = require('../_lib/convertToFp/index.js')`)
     .concat('')
     .concat(`var ${name} = convertToFp(fn, ${arity})`)
@@ -20,7 +22,9 @@ function buildFpFn (doc) {
     .concat('')
     .join('\n')
 
-  const fpFnWithOptionsLines = [`var fn = require('../../${camelCaseToSnakeCase(name)}/index.js')`]
+  const fpFnWithOptionsLines = ['// This file is generated automatically. Please don\'t change it.']
+    .concat('')
+    .concat(`var fn = require('../../${camelCaseToSnakeCase(name)}/index.js')`)
     .concat(`var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')`)
     .concat('')
     .concat(`var ${name}WithOptions = convertToFpWithOptions(fn, ${arity})`)
