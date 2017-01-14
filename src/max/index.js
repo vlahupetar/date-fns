@@ -7,7 +7,7 @@ var toDate = require('../to_date/index.js')
  * @description
  * Return the latest of the given dates.
  *
- * @param {...(Date|String|Number)} dates - the dates to compare
+ * @param {Date[]|String[]|Number[]} datesArray - the dates to compare
  * @returns {Date} the latest of the dates
  *
  * @example
