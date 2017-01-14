@@ -121,7 +121,8 @@ function generateFlowFnTyping (fn) {
   const params = getParams(fn.content.params, {indent: 0, leftBorder: '(', rightBorder: ')'})
   const returns = getType(fn.content.returns[0].type.names)
 
-  const typingString = ['// @flow']
+  const typingString =  ['// @flow']
+    .concat('// This file is generated automatically. Please don\'t change it.')
     .concat('')
     .concat(`declare module.exports: ${params} => ${returns}\n`)
     .join('\n')
@@ -137,7 +138,9 @@ function generateTypeScriptTypings () {
     .sort((a, b) => a.content.name.localeCompare(b.content.name))
     .map(getTypeScriptFnDefinition)
 
-  const definitionString = ['declare module \'date-fns\' {']
+  const definitionString = ['// This file is generated automatically. Please don\'t change it.']
+    .concat('')
+    .concat('declare module \'date-fns\' {')
     .concat(`${fns.map(fn => fn.fnDefinition).join('\n\n')}`)
     .concat('}')
     .concat('')
