@@ -115,6 +115,27 @@ function getTypeScriptFnDefinition (fn) {
   }
 }
 
+function getTypeAlias (type) {
+  const name = type.content.name
+  const properties = getParams(type.content.properties, {indent: 0})
+
+  return `type ${name} = ${properties}`
+}
+
+function generateFlowTypeAlias (type) {
+  const name = type.content.name
+  const properties = getParams(type.content.properties, {indent: 0})
+  const filename = `./flow-typed/${name}.js.flow`
+
+  const aliasString = ['// @flow']
+    .concat('// This file is generated automatically. Please don\'t change it.')
+    .concat('')
+    .concat(`type ${name} = ${properties}\n`)
+    .join('\n')
+
+  fs.writeFileSync(filename, aliasString)
+}
+
 function generateFlowFnTyping (fn) {
   const filename = `./src/${camelCaseToSnakeCase(fn.content.name)}/index.js.flow`
 
@@ -130,7 +151,7 @@ function generateFlowFnTyping (fn) {
   fs.writeFileSync(filename, typingString)
 }
 
-function generateTypeScriptTypings () {
+function generateTypeScriptTypings (docs) {
   const fns = Object.keys(docs)
     .filter(key => key.endsWith(' Helpers'))
     .map(category => docs[category])
@@ -138,7 +159,12 @@ function generateTypeScriptTypings () {
     .sort((a, b) => a.content.name.localeCompare(b.content.name))
     .map(getTypeScriptFnDefinition)
 
+  const aliases = docs['Types']
+    .map(getTypeAlias)
+
   const definitionString = ['// This file is generated automatically. Please don\'t change it.']
+    .concat('')
+    .concat(`${aliases.join('\n\n')}`)
     .concat('')
     .concat('declare module \'date-fns\' {')
     .concat(`${fns.map(fn => fn.fnDefinition).join('\n\n')}`)
@@ -153,7 +179,10 @@ function generateTypeScriptTypings () {
   fs.writeFileSync('./typings.d.ts', definitionString)
 }
 
-function generateFlowTypings () {
+function generateFlowTypings (docs) {
+  docs['Types']
+    .forEach(generateFlowTypeAlias)
+
   Object.keys(docs)
     .filter(key => key.endsWith(' Helpers'))
     .map(category => docs[category])
@@ -161,5 +190,5 @@ function generateFlowTypings () {
     .forEach(generateFlowFnTyping)
 }
 
-generateTypeScriptTypings()
-generateFlowTypings()
+generateTypeScriptTypings(docs)
+generateFlowTypings(docs)
