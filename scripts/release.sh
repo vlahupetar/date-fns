@@ -12,6 +12,7 @@ yarn run sync-versions
 yarn run generate-index
 yarn run build-umd
 yarn run build-docs
+yarn run build-fp
 yarn run generate-typings
 
 git add .
