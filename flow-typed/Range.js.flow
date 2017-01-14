@@ -1,0 +1,7 @@
+// @flow
+// This file is generated automatically. Please don't change it.
+
+type Range = {
+  start: Date | string | number,
+  end: Date | string | number
+}

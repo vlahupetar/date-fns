@@ -1,3 +1,5 @@
+// This file is generated automatically. Please don't change it.
+
 module.exports = {
   addDays: require('./add_days/index.js'),
   addHours: require('./add_hours/index.js'),
@@ -130,5 +132,6 @@ module.exports = {
   subQuarters: require('./sub_quarters/index.js'),
   subSeconds: require('./sub_seconds/index.js'),
   subWeeks: require('./sub_weeks/index.js'),
-  subYears: require('./sub_years/index.js')
+  subYears: require('./sub_years/index.js'),
+  toDate: require('./to_date/index.js')
 }

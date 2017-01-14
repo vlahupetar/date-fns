@@ -1,8 +1,10 @@
 // @flow
+// This file is generated automatically. Please don't change it.
 
 declare module.exports: (
   dateString: string,
   formatString: string,
+  baseDate: Date | string | number,
   options?: {
     locale?: Object
   }

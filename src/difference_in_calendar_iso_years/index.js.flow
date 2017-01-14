@@ -1,6 +1,8 @@
 // @flow
+// This file is generated automatically. Please don't change it.
 
 declare module.exports: (
   dateLeft: Date | string | number,
-  dateRight: Date | string | number
+  dateRight: Date | string | number,
+  options?: Options
 ) => number

@@ -1,5 +1,6 @@
 // @flow
+// This file is generated automatically. Please don't change it.
 
 declare module.exports: (
-  datesArray: (Date|string|number)[]
+  datesArray: (Date | string | number)[]
 ) => Date

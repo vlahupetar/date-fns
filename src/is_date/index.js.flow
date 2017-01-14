@@ -1,5 +1,7 @@
 // @flow
+// This file is generated automatically. Please don't change it.
 
 declare module.exports: (
-  argument: any
+  argument: any,
+  options?: Options
 ) => boolean
