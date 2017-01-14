@@ -1,6 +1,8 @@
 const fs = require('fs')
 const docs = require('../dist/date_fns_docs.json')
 
+const FP_DIR = './src/fp'
+
 function camelCaseToSnakeCase (string) {
   return string
     .replace(/([a-z])([A-Z])/g, '$1_$2')
@@ -33,11 +35,19 @@ function buildFpFn (doc) {
     .concat('')
     .join('\n')
 
-  fs.mkdirSync(`./tmp/npm/fp/${name}`)
-  fs.writeFileSync(`./tmp/npm/fp/${name}/index.js`, fpFnLines)
+  const fpFnDir = `${FP_DIR}/${name}`
 
-  fs.mkdirSync(`./tmp/npm/fp/${name}WithOptions`)
-  fs.writeFileSync(`./tmp/npm/fp/${name}WithOptions/index.js`, fpFnWithOptionsLines)
+  if (!fs.existsSync(fpFnDir)) {
+    fs.mkdirSync(fpFnDir)
+  }
+  fs.writeFileSync(`${fpFnDir}/index.js`, fpFnLines)
+
+  const fpFnWithOptionsDir = `${FP_DIR}/${name}WithOptions`
+
+  if (!fs.existsSync(fpFnWithOptionsDir)) {
+    fs.mkdirSync(fpFnWithOptionsDir)
+  }
+  fs.writeFileSync(`${fpFnWithOptionsDir}/index.js`, fpFnWithOptionsLines)
 }
 
 function buildFp () {
