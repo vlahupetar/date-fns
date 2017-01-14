@@ -128,7 +128,7 @@ function generateFlowTypeAlias (type) {
   const filename = `./flow-typed/${name}.js.flow`
 
   const aliasString = ['// @flow']
-    .concat('// This file is generated automatically. Please don\'t change it.')
+    .concat('// This file is generated automatically by `scripts/build_typings.js`. Please, don\'t change it.')
     .concat('')
     .concat(`type ${name} = ${properties}\n`)
     .join('\n')
@@ -143,7 +143,7 @@ function generateFlowFnTyping (fn) {
   const returns = getType(fn.content.returns[0].type.names)
 
   const typingString =  ['// @flow']
-    .concat('// This file is generated automatically. Please don\'t change it.')
+    .concat('// This file is generated automatically by `scripts/build_typings.js`. Please, don\'t change it.')
     .concat('')
     .concat(`declare module.exports: ${params} => ${returns}\n`)
     .join('\n')
@@ -162,7 +162,7 @@ function generateTypeScriptTypings (docs) {
   const aliases = docs['Types']
     .map(getTypeAlias)
 
-  const definitionString = ['// This file is generated automatically. Please don\'t change it.']
+  const definitionString = ['// This file is generated automatically by `scripts/build_typings.js`. Please, don\'t change it.']
     .concat('')
     .concat(`${aliases.join('\n\n')}`)
     .concat('')
