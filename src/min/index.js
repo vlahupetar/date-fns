@@ -21,7 +21,6 @@ var toDate = require('../to_date/index.js')
  *  ]
  * )
  * //=> Wed Feb 11 1987 00:00:00
- * @param datesArray
  */
 function min (datesArray) {
   var dates = datesArray.map(function (dirtyDate) {

@@ -21,7 +21,6 @@ var toDate = require('../to_date/index.js')
  *  ]
  * )
  * //=> Sun Jul 02 1995 00:00:00
- * @param datesArray
  */
 function max (datesArray) {
   var dates = datesArray.map(function (dirtyDate) {
