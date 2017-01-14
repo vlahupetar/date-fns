@@ -15,23 +15,23 @@ function buildFpFn (doc) {
 
   const fpFnLines = ['// This file is generated automatically by `scripts/build_fp.js`. Please, don\'t change it.']
     .concat('')
-    .concat(`var fn = require('../../${camelCaseToSnakeCase(name)}/index.js')`)
-    .concat(`var convertToFp = require('../_lib/convertToFp/index.js')`)
+    .concat(`import fn from '../../${camelCaseToSnakeCase(name)}/index.js'`)
+    .concat(`import convertToFp from '../_lib/convertToFp/index.js'`)
     .concat('')
     .concat(`var ${name} = convertToFp(fn, ${arity})`)
     .concat('')
-    .concat(`module.exports = ${name}`)
+    .concat(`export default ${name}`)
     .concat('')
     .join('\n')
 
   const fpFnWithOptionsLines = ['// This file is generated automatically by `scripts/build_fp.js`. Please, don\'t change it.']
     .concat('')
-    .concat(`var fn = require('../../${camelCaseToSnakeCase(name)}/index.js')`)
-    .concat(`var convertToFpWithOptions = require('../_lib/convertToFpWithOptions/index.js')`)
+    .concat(`import fn from '../../${camelCaseToSnakeCase(name)}/index.js'`)
+    .concat(`import convertToFpWithOptions '../_lib/convertToFpWithOptions/index.js'`)
     .concat('')
     .concat(`var ${name}WithOptions = convertToFpWithOptions(fn, ${arity})`)
     .concat('')
-    .concat(`module.exports = ${name}WithOptions`)
+    .concat(`export default ${name}WithOptions`)
     .concat('')
     .join('\n')
 
